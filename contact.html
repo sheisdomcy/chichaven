@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Chic Haven</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Chic Haven</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Products</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <button class="menu-btn" id="menuBtn">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Contact Us</h1>
+            <p>We would love to hear from you. Visit us or send a message.</p>
+        </section>
+
+        <section class="contact-layout">
+            <div class="contact-info">
+                <h2>Our Details</h2>
+                <p><strong>Address:</strong> Polo Park Mall, Abakaliki Road, Enugu</p>
+                <p><strong>Phone:</strong> +234 7087213455</p>
+                <p><strong>Email:</strong> chichaven.enugu@gmail.com</p>
+                <p><strong>Opening Hours:</strong> Mon - Sat: 9am - 8pm</p>
+                <p><strong>Instagram:</strong> @chichaven.enugu</p>
+            </div>
+
+            <form id="contactForm" class="contact-form">
+                <h2>Send Us a Message</h2>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" placeholder="Enter your name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email">
+
+                <label for="message">Message:</label>
+                <textarea id="message" rows="4" placeholder="Type your message here..."></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+                <p id="formMessage"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Chic Haven. Polo Park Mall, Enugu.</p>
+        <p>Email: chichaven.enugu@gmail.com | Phone: +234 7087213455</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

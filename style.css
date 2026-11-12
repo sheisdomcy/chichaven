@@ -1,0 +1,195 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: Arial, sans-serif; line-height: 1.6; color: #222; }
+
+/* FLEXBOX - Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    color: white;
+    padding: 15px 30px;
+}
+.logo { color: #f4a261; font-size: 24px; font-weight: bold; text-decoration: none; }
+.nav-links { display: flex; list-style: none; gap: 20px; }
+.nav-links a { color: white; text-decoration: none; }
+.nav-links a.active, .nav-links a:hover { color: #f4a261; }
+.menu-btn { display: none; background: none; border: none; color: white; font-size: 24px; cursor: pointer; }
+
+/* Hero */
+.hero { text-align: center; padding: 70px 20px; background: #fdf0e6; }
+.hero h1 { font-size: 42px; margin-bottom: 15px; }
+.hero p { max-width: 600px; margin: 0 auto 25px; }
+.btn { display: inline-block; background: #e76f51; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; margin: 5px; }
+.btn-outline { background: transparent; border: 2px solid #e76f51; color: #e76f51; }
+
+/* Intro + Images */
+.intro { text-align: center; padding: 40px 20px; max-width: 800px; margin: auto; }
+.intro h2 { margin-bottom: 10px; }
+
+/* GRID - Home Images */
+.home-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 0 20px 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+.home-images img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; }
+
+footer { background: #111; color: white; text-align: center; padding: 20px; }
+
+/* RESPONSIVE - Mobile */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 30px; }
+    .nav-links { display: none; flex-direction: column; background: #111; position: absolute; top: 60px; right: 0; width: 100%; padding: 20px; text-align: center; }
+    .nav-links.show { display: flex; }
+    .menu-btn { display: block; }
+    .home-images { grid-template-columns: 1fr; }
+}
+/* About Page */
+.page-header { text-align: center; padding: 50px 20px; background: #fdf0e6; }
+.page-header h1 { font-size: 36px; }
+.about-content { max-width: 800px; margin: auto; padding: 30px 20px; }
+.about-content h2 { margin: 20px 0 10px; color: #e76f51; }
+.about-list { margin-left: 20px; margin-top: 10px; }
+
+/* GRID - Mission Cards */
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+.mission-card { background: #fff; border: 1px solid #ddd; padding: 20px; border-radius: 8px; text-align: center; }
+.mission-card h3 { color: #e76f51; margin-bottom: 10px; }
+
+@media (max-width: 768px) {
+    .mission-grid { grid-template-columns: 1fr; }
+}
+/* Contact Page - FLEXBOX */
+.contact-layout {
+    display: flex;
+    gap: 30px;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px 40px;
+}
+.contact-info, .contact-form { flex: 1; background: #fdf0e6; padding: 20px; border-radius: 8px; }
+.contact-form label { display: block; margin-top: 15px; font-weight: bold; }
+.contact-form input, .contact-form textarea {
+    width: 100%; padding: 10px; margin-top: 5px;
+    border: 1px solid #ccc; border-radius: 5px;
+}
+.contact-form .btn { margin-top: 15px; border: none; cursor: pointer; width: 100%; }
+#formMessage { margin-top: 10px; font-weight: bold; }
+
+@media (max-width: 768px) {
+    .contact-layout { flex-direction: column; }
+}
+/* Mobile Menu Button */
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+}
+/* PRODUCTS PAGE - Chic Haven */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.product img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+/* PRODUCTS PAGE - Make products neat */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.product img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* On phone, show 1 product per row */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* FIX - your HTML uses product-card, not product */
+.product-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+/* PHONE VIEW - for screens smaller than 768px */
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+  .home-images {
+    grid-template-columns: 1fr;
+  }
+}

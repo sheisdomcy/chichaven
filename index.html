@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chic Haven | Fashion Store in Enugu</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+.product-grid, .products, .services-grid, .product-list {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 20px !important;
+  max-width: 1000px !important;
+  margin: auto !important;
+}
+.product img, .product-card img, .service-card img {
+  width: 100% !important;
+  height: 250px !important;
+  object-fit: cover !important;
+}
+</style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Chic Haven</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="menu-btn" id="menuBtn">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to Chic Haven</h1>
+            <p>Look Good, Feel Confident. Your one-stop fashion store for trendy, affordable clothes for men and women in Enugu.</p>
+            <div class="hero-buttons">
+                <a href="services.html" class="btn">Shop Now</a>
+                <a href="contact.html" class="btn btn-outline">Contact Us</a>
+            </div>
+        </section>
+
+        <section class="intro">
+            <h2>Your Style, Your Confidence</h2>
+            <p>Chic Haven is a fashion store in Enugu that brings you quality dresses, shirts, jeans, shoes and accessories at prices you can afford. Whether it is for work, church, parties or everyday wear, we have something for you.</p>
+        </section>
+
+        <section class="home-images">
+            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=600" alt="Fashion clothes rack">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600" alt="Fashion model">
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600" alt="Fashion store">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Chic Haven. Polo Park Mall, Enugu.</p>
+        <p>Email: chichaven.enugu@gmail.com | Phone: +234 7087213455</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

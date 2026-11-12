@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products | Chic Haven</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+.product-grid, .products-grid,.product, .services-grid, .product-list {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 20px !important;
+  max-width: 1000px !important;
+  margin: auto !important;
+}
+.product img, .product-card img, .service-card img {
+  width: 100% !important;
+  height: 250px !important;
+  object-fit: cover !important;
+}
+</style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Chic Haven</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="menu-btn" id="menuBtn">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Our Products</h1>
+            <p>Trendy fashion at affordable prices. <span id="cartCount">Cart: 0 items</span></p>
+        </section>
+
+        <section class="products-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600" alt="Ladies Dress">
+                <h3>Ladies Summer Dress</h3>
+                <p>Light, comfortable dress for everyday and parties.</p>
+                <p class="price">₦15,000</p>
+                <button class="btn add-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?w=600" alt="Men's Shirt">
+                <h3>Men's Classic Shirt</h3>
+                <p>Smart casual shirt, perfect for work and outings.</p>
+                <p class="price">₦12,000</p>
+                <button class="btn add-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=600" alt="Denim Jeans">
+                <h3>Denim Jeans</h3>
+                <p>Durable, stylish jeans for men and women.</p>
+                <p class="price">₦18,000</p>
+                <button class="btn add-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600" alt="Sneakers">
+                <h3>Sneakers</h3>
+                <p>Comfortable sneakers for daily wear.</p>
+                <p class="price">₦25,000</p>
+                <button class="btn add-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600" alt="Handbag">
+                <h3>Handbag</h3>
+                <p>Elegant bag for ladies, perfect for any occasion.</p>
+                <p class="price">₦20,000</p>
+                <button class="btn add-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=600" alt="Wrist Watch">
+                <h3>Wrist Watch</h3>
+                <p>Classy watch to complete your look.</p>
+                <p class="price">₦22,000</p>
+                <button class="btn add-cart">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Chic Haven. Polo Park Mall, Enugu.</p>
+        <p>Email: chichaven.enugu@gmail.com | Phone: +234 7087213455</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
