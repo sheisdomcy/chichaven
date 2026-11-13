@@ -302,3 +302,27 @@ footer { background: #111; color: white; text-align: center; padding: 20px; }
   font-size: 14px !important;
   display: block !important;
 }
+/* FORCE 2-COLUMN GRID - FINAL FIX */
+main, section {
+  width: 100% !important;
+  overflow: hidden !important;
+}
+main > div, section > div {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  padding: 10px !important;
+}
+main > div > div, section > div > div {
+  width: 100% !important;
+  min-width: 0 !important;
+  background: white !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  text-align: center !important;
+}
+main img, section img {
+  width: 100% !important;
+  height: 180px !important;
+  object-fit: cover !important;
+}
