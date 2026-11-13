@@ -193,3 +193,28 @@ footer { background: #111; color: white; text-align: center; padding: 20px; }
     grid-template-columns: 1fr;
   }
 }
+/* FIX MENU BUTTON ON PHONE */
+.hamburger, .menu-toggle, .nav-toggle {
+  color: white !important;
+  font-size: 30px !important;
+  display: block !important;
+  cursor: pointer;
+  z-index: 1000;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .nav-links, .nav-menu {
+    display: none;
+  }
+  .nav-links.active, .nav-menu.active {
+    display: flex !important;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+  }
+}
