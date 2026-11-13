@@ -251,3 +251,54 @@ footer { background: #111; color: white; text-align: center; padding: 20px; }
     font-size: 18px;
   }
 }
+/* FIX PRODUCT SHAPE - Nice cards */
+.products, .product-grid, .product-list {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  padding: 12px !important;
+  flex-direction: unset !important;
+}
+
+.product, .product-card {
+  width: 100% !important;
+  max-width: 100% !important;
+  background: white !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  padding: 0 0 12px 0 !important;
+  text-align: center !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.product img, .product-card img {
+  width: 100% !important;
+  height: 180px !important;
+  object-fit: cover !important;
+  border-radius: 0 !important;
+}
+
+.product h3, .product-card h3,
+.product h2, .product-card h2 {
+  font-size: 15px !important;
+  margin: 8px 5px 4px 5px !important;
+  line-height: 1.2 !important;
+}
+
+.product p, .product-card p {
+  font-size: 13px !important;
+  margin: 2px 5px !important;
+  line-height: 1.3 !important;
+}
+
+.product button, .product-card button,
+.product a, .product-card a {
+  width: 90% !important;
+  margin: 8px auto 0 auto !important;
+  padding: 10px !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  display: block !important;
+}
