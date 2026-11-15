@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Cart - Chic Haven</title>
+<style>
+body{margin:0;font-family:Arial;background:#FFF5EE}
+header{background:#111;color:white;padding:15px;display:flex;justify-content:space-between;align-items:center}
+header a{color:white !important;text-decoration:none !important;font-weight:bold}
+h1{text-align:center}
+.item{background:white;margin:12px;padding:15px;border-radius:12px;display:flex;justify-content:space-between;align-items:center}
+.item b{font-size:16px}
+.item span{color:#555}
+button{background:#FF5A5A;color:white;border:none;padding:10px 16px;border-radius:8px;font-weight:bold}
+.checkout{background:#25D366;color:white;border:none;padding:15px;width:92%;margin:12px;display:block;border-radius:10px;font-size:17px;font-weight:bold}
+.clear{background:#111;color:white;border:none;padding:12px;width:92%;margin:0 12px 20px;border-radius:10px}
+.empty{text-align:center;color:#777;margin-top:40px}
+</style>
+</head>
+<body>
+<header>
+<a href="index.html">Chic Haven</a>
+<a href="products.html">Continue Shopping</a>
+</header>
+<h1>Your Cart 🛒</h1>
+<div id="cart-items"></div>
+<div id="total" style="text-align:center;font-weight:bold;font-size:18px;margin:15px;"></div>
+<button class="checkout" onclick="checkout()">Order on WhatsApp</button>
+<button class="clear" onclick="clearCart()">Clear Cart</button>
+
+<script>
+let cart = JSON.parse(localStorage.getItem('chicCart')) || [];
+let box = document.getElementById('cart-items');
+let totalBox = document.getElementById('total');
+if(cart.length === 0){
+  box.innerHTML = '<p class="empty">Your cart is empty.<br>Go and add some products!</p>';
+} else {
+  let total = 0;
+  cart.forEach((item, i) => {
+    let priceNum = parseInt(item.price.replace(/[^0-9]/g,''));
+    total += priceNum;
+    box.innerHTML += '<div class="item"><div><b>'+item.name+'</b><br><span>'+item.price+'</span></div><button onclick="removeItem('+i+')">Remove</button></div>';
+  });
+  totalBox.textContent = 'Total: ₦' + total.toLocaleString();
+}
+function removeItem(i){
+  cart.splice(i,1);
+  localStorage.setItem('chicCart', JSON.stringify(cart));
+  location.reload();
+}
+function clearCart(){
+  localStorage.removeItem('chicCart');
+  location.reload();
+}
+function checkout(){
+  if(cart.length===0){ alert('Cart is empty'); return; }
+  let msg = 'Hello Chic Haven! I want to order:%0A';
+  cart.forEach(item => { msg += '- ' + item.name + ' - ' + item.price + '%0A'; });
+  window.open('https://wa.me/2347087213455?text=' + msg, '_blank');
+}
+</script>
+</body>
+</html>
